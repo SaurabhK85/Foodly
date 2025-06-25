@@ -4,25 +4,17 @@ const port = process.env.PORT || 5000;
 const mongoDB = require('./db');
 mongoDB();
 
+// CORS middleware - MUST be before routes
 app.use((req, res, next) => {
-  // Use the FRONTEND_URL from environment variables
-  const allowedOrigins = [
-    "http://localhost:3000",
-    process.env.FRONTEND_URL || "https://foodly-app-five.vercel.app"
-  ];
+  const allowedOrigin = process.env.FRONTEND_URL || "https://foodly-app-five.vercel.app";
   
-  const origin = req.headers.origin;
-  if (allowedOrigins.includes(origin)) {
-    res.setHeader("Access-Control-Allow-Origin", origin);
-  }
-  
+  // Set CORS headers
+  res.setHeader("Access-Control-Allow-Origin", allowedOrigin);
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
+  res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
   
-  // Handle preflight
+  // Handle preflight OPTIONS request
   if (req.method === 'OPTIONS') {
     return res.sendStatus(200);
   }
@@ -30,7 +22,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.json())
+app.use(express.json());
 app.use('/api/auth', require('./Routes/Auth'));
 
 app.get('/', (req, res) => {
