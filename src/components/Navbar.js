@@ -33,12 +33,15 @@ export default function Navbar(props) {
                     backdropFilter: "blur(10px)"
                 }}>
                 <div className="container-fluid">
-                    <Link className="navbar-brand d-flex flex-column align-items-start" to="/">
-                        <div className="fs-2 fw-bold lh-1">
-                            <span className="text-success">Food</span>
-                            <span className="text-warning">ly</span>
+                    <Link className="navbar-brand d-flex align-items-center" to="/">
+                        <img src="Logo.png" alt="Foodly Logo" style={{ width: "40px", height: "40px", marginRight: "10px" }} />
+                        <div className="d-flex flex-column align-items-start">
+                            <div className="fs-2 fw-bold lh-1">
+                                <span className="text-success">Food</span>
+                                <span className="text-warning">ly</span>
+                            </div>
+                            <small className="text-white" style={{ fontSize: "0.7rem", marginTop: "-5px" }}>Food Made Friendly</small>
                         </div>
-                        <small className="text-white-50" style={{ fontSize: "0.7rem", marginTop: "-5px" }}>Food Made Friendly</small>
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>

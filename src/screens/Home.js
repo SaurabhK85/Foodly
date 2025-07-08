@@ -33,7 +33,8 @@ export default function Home() {
       <div style={{ position: "relative" }}>
         <Navbar />
       </div>
-      <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{ height: "100vh", marginTop: "0" }}>
+
+      <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{ height: "100vh"}}>
         <div className="carousel-inner" id="carousel" style={{ height: "100%" }}>
           <div className="carousel-caption" style={{ zIndex: "9", top: "50%", bottom: "auto", transform: "translateY(-50%)" }}>
             <div className="d-flex justify-content-center">
@@ -49,13 +50,13 @@ export default function Home() {
             </div>
           </div>
           <div className="carousel-item active" style={{ height: "100%" }}>
-            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1920&h=1080&fit=crop" className="d-block w-100 h-100" style={{ filter: "brightness(30%)", objectFit: "cover" }} alt="..." />
+            <img src="https://media.tenor.com/x87xyKzA-nsAAAAC/burger-king-fast-food.gif" className="d-block w-100 h-100" style={{ filter: "brightness(30%)", objectFit: "cover" }} alt="..." />
           </div>
           <div className="carousel-item" style={{ height: "100%" }}>
-            <img src="https://images.unsplash.com/photo-1509365390695-33aee754301f?w=1920&h=1080&fit=crop" className="d-block w-100 h-100" style={{ filter: "brightness(30%)", objectFit: "cover" }} alt="..." />
+            <img src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="d-block w-100 h-100" style={{ filter: "brightness(30%)", objectFit: "cover" }} alt="..." />
           </div>
           <div className="carousel-item" style={{ height: "100%" }}>
-            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1920&h=1080&fit=crop" className="d-block w-100 h-100" style={{ filter: "brightness(30%)", objectFit: "cover" }} alt="..." />
+            <img src="https://media1.tenor.com/m/p-LOAl8Ue_UAAAAC/tenor.gif" className="d-block w-100 h-100" style={{ filter: "brightness(30%)", objectFit: "cover" }} alt="..." />
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev" style={{ width: "10%" }}>
@@ -72,7 +73,7 @@ export default function Home() {
         </button>
       </div>
 
-      <div className="container mt-5">
+      <div className="container mt-2">
         {foodCat.length > 0 ? foodCat.map((data) => (
           <div key={data._id || data.id} className="row mb-3">
             <div className="fs-3 m-3">{data.CategoryName}</div>

@@ -84,7 +84,16 @@ export default function Footer() {
           <div className="pt-3 mt-3 ">
             <div className="d-flex justify-content-between align-items-center">
               <p className="mb-0 small text-muted">
-                Made with <span className="text-white">❤️</span> by Saurabh Kumar
+                Made with <span className="text-white">❤️</span> by{' '}
+                <a 
+                  href="https://www.linkedin.com/in/saurabh-kumar-b67024268/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-success text-decoration-none"
+                  style={{ fontWeight: "500" }}
+                >
+                  Saurabh Kumar
+                </a>
               </p>
             </div>
           </div>
