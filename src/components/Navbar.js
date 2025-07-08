@@ -40,7 +40,7 @@ export default function Navbar(props) {
                                 <span className="text-success">Food</span>
                                 <span className="text-warning">ly</span>
                             </div>
-                            <small className="text-white" style={{ fontSize: "0.7rem", marginTop: "-5px" }}>Food Made Friendly</small>
+                            <small className="text-white" style={{ fontSize: "0.7rem", marginTop: "-3px" }}>Food Made Friendly</small>
                         </div>
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
